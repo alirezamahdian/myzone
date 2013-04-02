@@ -1,0 +1,25 @@
+Requirement:
+
+You should have already installed Java Runtime Environment(JRE) on your machine. 
+JRE comes standard with Mac OS and most linux distributions. 
+To check if you have JRE on your machine open a termini and type java. if you get a "command not found message" it means that you don't have JRE and you need to install it. 
+You can get JRE from: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+Windows:
+
+1. browse to MyZone_Client directory.
+2. double click on MyZone_WINDOWS.bat.
+3. open your browser (chrome, firefox are preferable) and type http://localhost:8080
+4. Voila!!!
+
+*** IMPORTANT *** to close MyZone properly close the terminal opened by running MyZone_WINDOWS.bat and after that open task manager and look for a process named javaw and end task that process.
+
+Mac OS and Linux:
+
+1. browse to MyZone_Client directory.
+2. double click on MyZone_MAC_LINUX.
+3. you will be asked for super user password. assuming you have super user privileges enter your login password.
+4. open your browser and type http://localhost:8080
+5. Voila!!!
+
+*** IMPORTANT *** to close MyZone properly close the terminals and kill the org.eclipse.jetty process.

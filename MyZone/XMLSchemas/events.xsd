@@ -1,0 +1,66 @@
+<xs:element name="event">
+    <xs:attribute name="id" type="xs:unsignedLong"/>
+    <xs:attribute name="lastUpdateTime" type="xs:unsignedLong"/>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="location" type="xs:string"/>
+    <xs:element name="decision" type="xs:string"/>
+    <xs:element name="creator">
+        <xs:element name="user">
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="memberSince" type="xs:unsignedLong"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="startDate">
+        <xs:element name="date">
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="month" type="xs:integer"/>
+            <xs:element name="day" type="xs:integer"/>
+            <xs:element name="hour" type="xs:integer"/>
+            <xs:element name="minute" type="xs:integer"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="endDate">
+        <xs:element name="date">
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="month" type="xs:integer"/>
+            <xs:element name="day" type="xs:integer"/>
+            <xs:element name="hour" type="xs:integer"/>
+            <xs:element name="minute" type="xs:integer"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="pendingNotification">
+        <xs:element name="user">
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="memberSince" type="xs:unsignedLong"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="invitees">
+        <xs:element name="user">
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="memberSince" type="xs:unsignedLong"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="accepted">
+        <xs:element name="user">
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="memberSince" type="xs:unsignedLong"/>
+        </xs:element>
+    </xs:element>
+    <xs:element name="declined">
+        <xs:element name="user">
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="memberSince" type="xs:unsignedLong"/>
+        </xs:element>
+    </xs:element>
+</xs:element>

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "*********************** IMPORTANT NOTICE *************************"
+echo "*  Please read how_to_install.txt file before using this script  *"
+echo "*  as it may not run MyZone properly on your computer!!!         *"
+echo "******************************************************************"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+sudo java run_unix

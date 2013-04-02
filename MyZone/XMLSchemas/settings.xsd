@@ -1,0 +1,16 @@
+<xs:element name="settings">
+    <xs:attribute name="username" type="xs:string"/>
+    <xs:attribute name="maxNumberOfChanges" type="xs:integer"/>
+    <xs:attribute name="CAServerName" type="xs:string"/>
+    <xs:attribute name="rendezvousServerAddress" type="xs:string"/>
+    <xs:attribute name="rendezvousServerPort" type="xs:integer"/>
+    <xs:attribute name="relayServerAddress" type="xs:string"/>
+    <xs:attribute name="relayServerPort" type="xs:integer"/>
+    <xs:attribute name="STUNServerAddress" type="xs:string"/>
+    <xs:attribute name="STUNServerPort" type="xs:integer"/>
+    <xs:attribute name="cacheSize" type="xs:integer"/>
+    <xs:attribute name="MyZonePort" type="xs:integer"/>
+    <xs:attribute name="devPriority" type="xs:integer"/>
+    <xs:attribute name="lastSyncTime1" type="xs:unsignedLong"/>
+    <xs:attribute name="lastSyncTime2" type="xs:unsignedLong"/>
+</xs:element>

@@ -1,0 +1,5 @@
+<xs:element name="historyLogEntry">
+    <xs:element name="start" type="xs:string"/>
+    <xs:element name="end" type="xs:string"/>
+    <xs:element name="numberOfChanges" type="xs:string"/>
+<xs:element/>

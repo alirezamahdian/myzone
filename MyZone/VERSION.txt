@@ -1,2 +1,0 @@
-MyZone Version 1.00 (6/6/2012)
-- initial release.

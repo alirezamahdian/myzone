@@ -1,4 +1,0 @@
-<xs:element name="changeEntry">
-    <xs:attribute name="id" type="xs:unsignedLong"/>
-    <xs:attribute name="filename" type="xs:string"/>
-<xs:element/>

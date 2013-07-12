@@ -1,8 +1,0 @@
-<xs:element name="deletedEntry">
-    <xs:attribute name="parent" type="xs:unsignedLong"/>
-    <xs:attribute name="id" type="xs:unsignedLong"/>
-    <xs:attribute name="lastUpdateTime" type="xs:unsignedLong"/>
-    <xs:attribute name="postedBy" type="xs:string"/>
-    <xs:attribute name="shareWith" type="xs:string"/>
-    <xs:attribute name="type" type="xs:unsignedLong"/>
-</xs:element>

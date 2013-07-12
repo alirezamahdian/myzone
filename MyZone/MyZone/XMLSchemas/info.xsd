@@ -1,0 +1,31 @@
+<xs:element name="info">
+    <xs:attribute name="id" type="xs:unsignedLong"/>
+    <xs:attribute name="lastUpdateTime" type="xs:unsignedLong"/>
+    <xs:element name="basic">
+        <xs:element name="firstName" type="xs:string"/>
+        <xs:element name="lastName" type="xs:string"/>
+        <xs:element name="sex" type="xs:string"/>
+        <xs:element name="dateOfBirth">
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="month" type="xs:integer"/>
+            <xs:element name="day" type="xs:integer"/>
+        </xs:element>
+        <xs:element name="relationshipStatus" type="xs:string"/>
+        <xs:element name="aboutMe" type="xs:string"/>
+        <xs:element name="profilePic" type="xs:string"/>
+    </xs:element>
+    <xs:element name="education">
+        <xs:element name="level" type="xs:string"/>
+        <xs:element name="degree" type="xs:string"/>
+        <xs:element name="major" type="xs:string"/>
+        <xs:element name="institution" type="xs:string"/>
+        <xs:element name="startYear" type="xs:string"/>
+        <xs:element name="finishYear" type="xs:string"/>
+    </xs:element>
+    <xs:element name="employment">
+        <xs:element name="position" type="xs:string"/>
+        <xs:element name="institution" type="xs:string"/>
+        <xs:element name="startYear" type="xs:string"/>
+        <xs:element name="finishYear" type="xs:string"/>
+    </xs:element>
+</xs:element>

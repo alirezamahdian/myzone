@@ -1,0 +1,46 @@
+<xs:element name="pendingChange">
+    <xs:attribute name="id" type="xs:unsignedLong"/>
+    <xs:attribute name="action" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="shareWith" type="xs:string"/>
+    <xs:attribute name="belongsTo" type="xs:string"/>
+    <xs:element name="link">
+        ...
+    </xs:element>
+    <xs:element name="status">
+        ...
+    </xs:element>
+    <xs:element name="audioAlbum">
+        ...
+    </xs:element>
+    <xs:element name="videoAlbum">
+        ...
+    </xs:element>
+    <xs:element name="photoAlbum">
+        ...
+    </xs:element>
+    <xs:element name="audio">
+        ...
+    </xs:element>
+    <xs:element name="video">
+        ...
+    </xs:element>
+    <xs:element name="photo">
+        ...
+    </xs:element>
+    <xs:element name="like">
+        ...
+    </xs:element>
+    <xs:element name="dislike">
+        ...
+    </xs:element>
+    <xs:element name="comment">
+        ...
+    </xs:element>
+    <xs:element name="message">
+        ...
+    </xs:element>
+    <xs:element name="event">
+        ...
+    </xs:element>
+</xs:element>

@@ -1,0 +1,11 @@
+<xs:element name="mirror">
+    <xs:attribute name="id" type="xs:unsignedLong"/>
+    <xs:attribute name="username" type="xs:string"/>
+    <xs:attribute name="passphrase" type="xs:string"/>
+    <xs:attribute name="capacity" type="xs:unsignedLong"/>
+    <xs:attribute name="used" type="xs:unsignedLong"/>
+    <xs:attribute name="priority" type="xs:integer"/>
+    <xs:attribute name="lastSyncTime" type="xs:unsignedLong"/>
+    <xs:attribute name="lastModifiedTime" type="xs:unsignedLong"/>
+    <xs:attribute name="status" type="xs:string"/>
+</xs:element>

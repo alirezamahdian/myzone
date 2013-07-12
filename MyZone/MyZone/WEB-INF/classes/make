@@ -1,0 +1,108 @@
+#!/bin/bash
+NO_ARGS=0 
+E_OPTERROR=85
+if [ $# -eq "$NO_ARGS" ]    # Script invoked with no command-line args?
+then
+echo "usage: compile [MyZone|utils|all]"
+echo "       clean [MyZone|utils|all]"
+exit $E_OPTERROR
+fi
+if [ $1 = "compile" ] && [ $2 = "utils" ] 
+then
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/CertAuthUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/CertAuthUtil/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/KeyPairUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/KeyPairUtil/*.java
+echo "javac -Xlint utils/net/rudp/impl/*.java"
+javac -Xlint utils/net/rudp/impl/*.java
+echo "javac -Xlint -cp .:bcprov-jdk15on-148.jar utils/net/rudp/*.java"
+javac -Xlint -cp .:bcprov-jdk15on-148.jar utils/net/rudp/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/RelaySocket/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/RelaySocket/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/peer/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/peer/*.java
+echo "javac utils/peer/stun/attribute/*.java"
+javac utils/peer/stun/attribute/*.java
+echo "javac utils/peer/stun/header/*.java"
+javac utils/peer/stun/header/*.java
+echo "javac utils/peer/stun/util*.java"
+javac utils/peer/stun/util/*.java
+fi
+if [ $1 = "clean" ] && [ $2 = "utils" ] 
+then
+rm utils/attributes/*.class
+rm utils/security/CertUtil/*.class
+rm utils/security/CertUtil/CertAuthUtil/*.class
+rm utils/security/KeyPairUtil/*.class
+rm utils/net/rudp/impl/*.class
+rm utils/net/rudp/*.class
+rm utils/net/SecureSocket/RelaySocket/*.class
+rm utils/net/SecureSocket/*.class
+rm utils/peer/*.class
+rm utils/peer/stun/attribute/*.class
+rm utils/peer/stun/header/*.class
+rm utils/peer/stun/util/*.class
+fi
+if [ $1 = "compile" ] && [ $2 = "all" ] 
+then
+echo "javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/elements/*.java"
+javac -cp .:bcprov-jdk15on-148.jar::commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/elements/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/*.java"
+javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/CertAuthUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/CertUtil/CertAuthUtil/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/security/KeyPairUtil/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/security/KeyPairUtil/*.java
+echo "javac -Xlint utils/net/rudp/impl/*.java"
+javac -Xlint utils/net/rudp/impl/*.java
+echo "javac -Xlint utils/net/rudp/*.java"
+javac -Xlint utils/net/rudp/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/RelaySocket/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/RelaySocket/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/net/SecureSocket/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar utils/peer/*.java"
+javac -cp .:bcprov-jdk15on-148.jar utils/peer/*.java
+echo "javac utils/peer/stun/attribute/*.java"
+javac utils/peer/stun/attribute/*.java
+echo "javac utils/peer/stun/header/*.java"
+javac utils/peer/stun/header/*.java
+echo "javac utils/peer/stun/util*.java"
+javac utils/peer/stun/util/*.java
+fi
+if [ $1 = "clean" ] && [ $2 = "all" ] 
+then
+rm MyZone/elements/*.class
+rm MyZone/*.class
+rm utils/attributes/*.class
+rm utils/security/CertUtil/*.class
+rm utils/security/CertUtil/CertAuthUtil/*.class
+rm utils/security/KeyPairUtil/*.class
+rm utils/net/rudp/impl/*.class
+rm utils/net/rudp/*.class
+rm utils/net/SecureSocket/RelaySocket/*.class
+rm utils/net/SecureSocket/*.class
+rm utils/peer/*.class
+rm utils/peer/stun/attribute/*.class
+rm utils/peer/stun/header/*.class
+rm utils/peer/stun/util/*.class
+fi
+if [ $1 = "compile" ] && [ $2 = "MyZone" ] 
+then
+echo "javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/elements/*.java"
+javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/elements/*.java
+echo "javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/*.java"
+javac -cp .:bcprov-jdk15on-148.jar:commons-codec-1.6.jar:commons-logging-1.1.1.jar:fluent-hc-4.2.5.jar:httpclient-4.2.5.jar:httpclient-cache-4.2.5.jar:httpcore-4.2.4.jar:httpmime-4.2.5.jar MyZone/*.java
+fi
+if [ $1 = "clean" ] && [ $2 = "MyZone" ] 
+then
+rm MyZone/elements/*.class
+rm MyZone/*.class
+fi
+
